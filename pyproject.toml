@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circumplex-converter"
+version = "0.1.0"
+description = "CLI tool to convert therapeutic prompt-pack YAML to Circumplex-AI JSON with validation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Developer", email = "developer@example.com"}]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "rich>=10.0.0","typer>=0.7.0","pyyaml>=6.0","jsonschema>=4.0.0",
+]
+
+[project.scripts]
+circumplex-converter = "circumplex_converter.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
